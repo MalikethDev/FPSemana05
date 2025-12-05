@@ -2,24 +2,23 @@ import argparse
 
 
 class ContaBancaria:
-    pass
-
-# init com os atributos da classe
-def __init__(self, titular, saldo_inicial, limite):
+    
+    # init com os atributos da classe
+    def __init__(self, titular, saldo_inicial, limite):
         self.titular = titular
         self.saldo = saldo_inicial
         self.limite = limite
 
-# Depositar: adiciona o valor à conta, se for positivo imprime 1, caso contrário imprime 0
-def depositar(self, valor):
+    # Depositar: adiciona o valor à conta, se for positivo imprime 1, caso contrário imprime 0
+    def depositar(self, valor):
         if valor > 0:
             self.saldo += valor
             print(1)
         else:
             print(0)
 
-# Levantar: subtrai o valor da conta, se a operação for bem sucedida imprime 1, caso contrário imprime 0
-def levantar(self, valor):
+    # Levantar: subtrai o valor da conta, se a operação for bem sucedida imprime 1, caso contrário imprime 0
+    def levantar(self, valor):
         # Total disponivel
         total_disponivel = self.saldo + self.limite
 
@@ -29,12 +28,12 @@ def levantar(self, valor):
         else:
             print(0)
 
-# Exibir saldo
-def exibir_saldo(self):
-    print(f"{self.saldo:.2f}")
+    # Exibir saldo
+    def exibir_saldo(self):
+        print(f"{self.saldo:.2f}")
 
-# Exibir info
-def exibir_info(self):
+    # Exibir info
+    def exibir_info(self):
         print(f"[{self.titular}] [{self.saldo:.2f}] [{self.limite:.2f}]")
 
 if __name__ == "__main__":
